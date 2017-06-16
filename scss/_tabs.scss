@@ -1,0 +1,29 @@
+.tab {
+	&s {
+		&__bookmark {
+			&s {
+				font-size: 18px;
+				line-height: 20px;
+			}
+
+			padding: 20px;
+			display: inline-block;
+			text-decoration: none;
+
+			&--active {
+				background: #ccc;
+			}
+		}
+
+		&__wrapper {
+			background: #ccc;
+		}
+	}
+
+	display: none;
+	padding: 20px;
+
+	&--active {
+		display: block;
+	}
+}

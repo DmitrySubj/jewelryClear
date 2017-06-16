@@ -1,0 +1,35 @@
+$font-size: 14px;
+$height: 24px;
+$padding: 0 20px;
+$border-radius: 5px;
+
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: lightseagreen;
+  box-shadow: none;
+  border: none;
+  display: inline-block;
+  font-size: $font-size;
+  line-height: $height;
+  height: $height;
+  padding: $padding;
+  font-family: inherit;
+  color: #ffffff;
+  border-radius: $border-radius;
+  opacity: .9;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--default,
+  &[disabled] {
+    cursor: default;
+    opacity: .4;
+  }
+}

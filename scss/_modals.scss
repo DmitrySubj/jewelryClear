@@ -1,0 +1,134 @@
+//fog variables
+$fogBackground: #000;
+$fogOpacity: .6;
+
+//modal variables
+$modalWidth: 480px;
+$modalBackground: #fff;
+$modalBorder: none;
+$modalBorderRadius: 15px;
+$modalBoxShadow: none;
+$modalPadding: 30px;
+
+$modalTextAlign: left;
+$modalFontSize: 16px;
+$modalLineHeight: 22px;
+
+//modal close button
+$modalCloseWidth: 24px;
+$modalCloseHeight: 24px;
+$modalCloseTop: 20px;
+$modalCloseRight: 20px;
+$modalCloseBackground: #000;
+
+//modal title
+$modalTitleFontSize: 20px;
+$modalTitleLineHeight: 22px;
+$modalTitleFontWeight: bold;
+$modalTitleTextAlign: center;
+$modalTitleFontColor: #000;
+
+//modal header
+$modalHeaderPadding: 0;
+$modalHeaderBorderBottom: none;
+
+//modal content
+$modalContentPadding: 0;
+
+//modal footer
+$modalFooterPadding: 0;
+$modalFooterBorderTop: none;
+$modalFooterMargin: 0;
+
+.body-modal {
+	overflow: hidden;
+}
+
+.modal {
+	&s {
+		&__fog {
+			position: absolute;
+			display: none;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: $fogBackground;
+			opacity: $fogOpacity;
+			z-index: 1000;
+		}
+	}
+
+	color: #000;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 100%;
+	z-index: 1001;
+	text-align: center;
+	vertical-align: middle;
+	bottom: 0;
+	display: none;
+	font-size: $modalFontSize;
+	line-height: $modalLineHeight;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 1px;
+		vertical-align: middle;
+	}
+
+	&__body {
+		position: relative;
+		z-index: 1;
+		padding: $modalPadding;
+		width: $modalWidth;
+		box-sizing: border-box;
+		display: inline-block;
+		background: $modalBackground;
+		text-align: $modalTextAlign;
+		border: $modalBorder;
+		vertical-align: middle;
+		border-radius: $modalBorderRadius;
+		box-shadow: $modalBoxShadow;
+	}
+
+	&__header {
+		padding: $modalHeaderPadding;
+		border-bottom: $modalHeaderBorderBottom;
+	}
+
+	&__content {
+		padding: $modalContentPadding;
+	}
+
+	&__footer {
+		padding: $modalFooterPadding;
+		border-top: $modalFooterBorderTop;
+		margin: $modalFooterMargin;
+	}
+
+	&__close {
+		position: absolute;
+		z-index: 1;
+		right: $modalCloseRight;
+		top: $modalCloseTop;
+		background: $modalCloseBackground;
+		width: $modalCloseWidth;
+		height: $modalCloseHeight;
+	}
+
+	&__title {
+		font-family: inherit;
+		font-size: $modalTitleFontSize;
+		line-height: $modalTitleLineHeight;
+		text-align: $modalTitleTextAlign;
+		font-weight: $modalTitleFontWeight;
+		color: $modalTitleFontColor;
+		text-transform: uppercase;
+	}
+}

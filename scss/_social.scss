@@ -1,0 +1,25 @@
+.social {
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  margin: 15px 0 0;
+
+  &__item {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    line-height: 30px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 1px solid #000;
+    text-decoration: none;
+    opacity: .9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

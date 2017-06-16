@@ -1,0 +1,348 @@
+$placehoderColor: #c1c1c1;
+
+//form__row
+$form__row-Margin: 15px 0 0 0;
+
+//form__label
+$form__label-Color: #000;
+$form__label-FontSize: 14px;
+$form__label-LineHeight: 28px; //рекомендуется установить высоту чекбокса
+$form__label-FontWeight: normal;
+$form__label-Margin: 0 0 0 0;
+
+//form__input
+$form__input-FontSize: 14px;
+$form__input-Background: none;
+$form__input-Height: 28px; //высота без бордеров
+$form__input-Border: 1px solid #000;
+$form__input-Padding: 0 10px;
+$form__input-BoxShadow: none;
+$form__input-BorderRadius: 5px;
+$form__input-TextAlign: left;
+
+//form__textarea
+$form__textarea-FontSize: $form__input-FontSize;
+$form__textarea-LineHeight: $form__textarea-FontSize + 2px;
+$form__textarea-Background: $form__input-Background;
+$form__textarea-Height: $form__input-Height * 4;
+$form__textarea-Border: $form__input-Border;
+$form__textarea-Padding: 10px;
+$form__textarea-BoxShadow: $form__input-BoxShadow;
+$form__textarea-BorderRadius: $form__input-BorderRadius;
+$form__textarea-TextAlign: $form__input-TextAlign;
+
+//form__checkbox
+$form__checkbox-Width: 20px;
+$form__checkbox-Height: $form__checkbox-Width;
+$form__checkbox-Margin: 0 0 0 10px;
+$form__checkbox-BoxShadow: none;
+$form__checkbox-Background: #fff;
+$form__checkbox-Border: 1px solid #000;
+$form__checkbox-CheckedBackground: #000;
+$form__checkbox-CheckedBorder: $form__checkbox-Border;
+
+//form__radio
+$form__radio-Width: $form__checkbox-Width;
+$form__radio-Height: $form__radio-Width;
+$form__radio-Margin: $form__checkbox-Margin;
+$form__radio-BoxShadow: $form__checkbox-BoxShadow;
+$form__radio-BorderRadius: $form__radio-Width / 2;
+$form__radio-Background: $form__checkbox-Background;
+$form__radio-Border: $form__checkbox-Border;
+$form__radio-CheckedBackground: $form__checkbox-CheckedBackground;
+$form__radio-CheckedBorder: $form__checkbox-Border;
+
+//form__select
+$form__select-Height: $form__input-Height + 2px;
+$form__select-Padding: 0 15px 0 10px;
+$form__select-FontSize: $form__input-FontSize;
+$form__select-LineHeight: $form__input-Height;
+$form__select-Background: $form__input-Background;
+$form__select-Border: $form__input-Border;
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+	color: $placehoderColor;
+}
+
+.form {
+	margin: 20px 0 0;
+
+	&__label {
+		display: block;
+		color: $form__label-Color;
+		vertical-align: middle;
+		font-size: $form__label-FontSize;
+		line-height: $form__label-LineHeight;
+		font-weight: $form__label-FontWeight;
+		margin: $form__label-Margin;
+	}
+
+	&__row {
+		margin: $form__row-Margin;
+		position: relative;
+	}
+
+	&__input {
+		background: $form__input-Background;
+		height: $form__input-Height;
+		position: relative;
+		border: $form__input-Border;
+		box-shadow: $form__input-BoxShadow;
+		border-radius: $form__input-BorderRadius;
+
+		input {
+			font-family: inherit;
+			color: inherit;
+			font-size: $form__input-FontSize;
+			line-height: $form__input-Height;
+			text-align: $form__input-TextAlign;
+			z-index: 2;
+			display: block;
+			width: 100%;
+			height: inherit;
+			padding: $form__input-Padding;
+			outline: none;
+			background: none;
+			box-sizing: border-box;
+			border: none;
+		}
+	}
+
+	&__textarea {
+		background: $form__textarea-Background;
+		height: $form__textarea-Height;
+		position: relative;
+		border: $form__textarea-Border;
+		box-shadow: $form__textarea-BoxShadow;
+		border-radius: $form__textarea-BorderRadius;
+
+		textarea {
+			font-family: inherit;
+			color: inherit;
+			font-size: $form__textarea-FontSize;
+			line-height: $form__textarea-LineHeight;
+			text-align: $form__textarea-TextAlign;
+			z-index: 2;
+			display: block;
+			width: 100%;
+			height: inherit;
+			padding: $form__textarea-Padding;
+			outline: none;
+			background: none;
+			box-sizing: border-box;
+			border: none;
+			resize: none;
+		}
+	}
+
+	&__checkbox {
+		display: inline-block;
+		vertical-align: middle;
+		margin: $form__checkbox-Margin;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		input {
+			box-shadow: $form__checkbox-BoxShadow;
+			width: $form__checkbox-Width;
+			height: $form__checkbox-Height;
+			border: $form__checkbox-Border;
+			display: inline-block;
+			background: $form__checkbox-Background;
+			vertical-align: middle;
+			-webkit-appearance: none;
+			margin: 0;
+			outline: none;
+
+			&:checked {
+				background: $form__checkbox-CheckedBackground;
+				border: $form__checkbox-CheckedBorder;
+			}
+		}
+	}
+
+	&__radio {
+		display: inline-block;
+		margin: $form__radio-Margin;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		input {
+			box-shadow: $form__radio-BoxShadow;
+			width: $form__radio-Width;
+			height: $form__radio-Height;
+			border: $form__radio-Border;
+			display: inline-block;
+			background: $form__radio-Background;
+			vertical-align: middle;
+			-webkit-appearance: none;
+			margin: 0;
+			outline: none;
+			border-radius: $form__radio-BorderRadius;
+
+			&:checked {
+				background: $form__radio-CheckedBackground;
+				border: $form__radio-CheckedBorder;
+			}
+		}
+	}
+
+
+
+	&__select {
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			right: 10px;
+			top: 50%;
+			margin: -2px 0 0;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 6px solid #000;
+		}
+
+		select {
+			font-family: inherit;
+			color: inherit;
+			position: relative;
+			font-size: $form__select-FontSize;
+			line-height: $form__select-LineHeight;
+			height: $form__select-Height;
+			outline: none;
+			display: block;
+			width: 100%;
+			background: $form__select-Background;
+			border: $form__select-Border;
+			padding: $form__select-Padding;
+			box-sizing: border-box;
+			border-radius: $form__input-BorderRadius;
+
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+	}
+
+	.addfile {
+		display: block;
+		overflow: hidden;
+		box-sizing: border-box;
+		height: 56px;
+		line-height: 56px;
+		font-size: 24px;
+		text-align: center;
+		background: #000;
+		color: #ffffff;
+		padding: 0;
+		border-radius: 20px;
+		// background: url("../images/ico_folder_sprite.png") no-repeat 0 0;
+		font-family: inherit;
+		font-weight: normal;
+
+		img {
+			display: none !important;
+		}
+
+		&--added {
+			background-position: 0 -30px;
+
+			.addfile__title {
+				display: none;
+			}
+			input {
+				display: none;
+			}
+			.addfile__name {
+				display: block;
+			}
+		}
+
+		&__clear {
+			display: inline-block;
+			//background: url("../images/ico-close.png")no-repeat 0 0;
+			width: 10px;
+			height: 10px;
+			margin: 0 0 0 10px;
+			vertical-align: middle;
+		}
+
+		&__title {
+			cursor: pointer;
+
+		}
+		&__name {
+
+		}
+
+		input {
+			cursor: pointer;
+			margin-top: -40px;
+			margin-right: -10px;
+			-moz-opacity: 0;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			font-size: 40px;
+			height: 50px;
+			float: right;
+		}
+	}
+
+	&__elem {
+		&--str {
+			display: inline-block;
+			.form__label {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__alert {
+		background: rgba(255, 0, 0, .1);
+		border-radius: 10px;
+		padding: 20px;
+		color: #999;
+	}
+
+	&__error {
+		color: #ff0000;
+		font-size: 12px;
+		line-height: 14px;
+		display: none;
+	}
+
+	&__control {
+		&--error {
+			.form__error {
+				display: block;
+			}
+
+			.form__input {
+				border-color: #f00;
+			}
+
+			.form__textarea {
+				border-color: #f00;
+			}
+
+			.form__select select {
+				border-color: #f00;
+			}
+
+			.form__select:after {
+				border-top-color: #f00;
+			}
+		}
+	}
+}
