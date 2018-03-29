@@ -135,6 +135,7 @@ $form__select-Border: $form__input-Border;
 			box-sizing: border-box;
 			border: none;
 			resize: none;
+			overflow: auto;
 		}
 	}
 
@@ -232,6 +233,9 @@ $form__select-Border: $form__input-Border;
 			-webkit-appearance: none;
 			-moz-appearance: none;
 			appearance: none;
+			&::-ms-expand {
+				display: none;
+			}
 		}
 	}
 
